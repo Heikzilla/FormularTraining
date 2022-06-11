@@ -1,10 +1,9 @@
 <?php
-session_start();
 
-print_r($_SESSION);
-if(isset($_SESSION['login'])){
-    header("Location: login.php");
-}
+session_start();
+session_destroy();
+
+
 ?>
 
 <!doctype html>
@@ -14,12 +13,10 @@ if(isset($_SESSION['login'])){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Welcome</title>
+    <title>Logout</title>
 </head>
 <body>
-<h1>HELLO <?= $_SESSION['nickname'] ?></h1>
-
-<a href='logout.php'>Click here to log out</a>
-
+You have been logged out. <a href="login.php">Go back</a>
 </body>
 </html>
+
