@@ -6,17 +6,17 @@ if (count($_POST) > 0){
     $password = $_POST['password'];
     if (checkEmailExists($email)){
         $user = requestEmailPasshash($email);
-
+        printf( 'Valide Email. ');
         if (password_verify($password, $user[0]['password'])) {
             session_start();
-            $_SESSION = $user[0]['nickname'];
+            $_SESSION['nickname'] = $user[0]['nickname'];
             $_SESSION['login'] = true;
 
-            header("Location: welcome.php");
-            echo 'Valides Passwort.';
+            header('Location: welcome.php');
+            printf( 'Valides Passwort.');
         } else {
             #header("Location: login.php");
-            echo 'Invalides Passwort.';
+            printf( 'Invalides Passwort.');
         }
     }
 }

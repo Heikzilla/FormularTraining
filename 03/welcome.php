@@ -2,7 +2,7 @@
 session_start();
 
 print_r($_SESSION);
-if(isset($_SESSION['login'])){
+if(!isset($_SESSION['login'])){
     header("Location: login.php");
 }
 ?>
