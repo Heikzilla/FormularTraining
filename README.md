@@ -20,3 +20,8 @@ Login Email und Passwort.
 Zugang nur mit erfolgreichem Login auf die welcome.php Seite.
 Logout button via Logout.php
 
+4. ----- Still in progress
+5. der Blog OOP
+6. Preis Übersichtsseite. zeigt an wie sich die Preise entwickeln. Man kann neue Preise eintragen.
+Es wird angezeigt ob es zur preis steigerung oder senkung kamm.
+
